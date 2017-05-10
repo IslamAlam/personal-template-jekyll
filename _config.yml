@@ -1,6 +1,6 @@
 --- 
 author: "Islam Mansour"
-baseurl: ""
+baseurl: "/personal-template-jekyll"
 collections: 
   about: ~
   contact: ~
