@@ -26,25 +26,9 @@ permalink: /gallery/
             <div class="section-container">
                 
                 <ul id="grid" class="grid">
-                                        
-                    {% for image in site.static_files %}
-                        {% if image.path contains 'img/gallery' %}
-                            <!--<img src="{{ site.baseurl }}{{ image.path }}" alt="image" /> -->
-                            <li>
-                                <div>
-                                    <img alt="image" src="{{ site.baseurl }}{{ image.path }}">
-                                    <a href="{{ site.baseurl }}{{ image.path }}" class="popup-with-move-anim">
-                                        <div class="over">
-                                            <div class="comein">
-                                                <i class="fa fa-search"></i>
-                                                <div class="comein-bg"></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                 </div>
-                            </li>
-                        {% endif %}
-                    {% endfor %}
+                <!--<img src="{{ site.baseurl }}{{ image.path }}" alt="image" /> -->
+                    
+                    {% for image in site.static_files %} {% if image.path contains 'img/gallery' %} <li><div><img alt="image" src="{{ site.baseurl }}{{ image.path }}"><a href="{{ site.baseurl }}{{ image.path }}" class="popup-with-move-anim"><div class="over"><div class="comein"><i class="fa fa-search"></i><div class="comein-bg"></div></div></div></a></div></li> {% endif %}{% endfor %}
                     
             </div>
         </div>
