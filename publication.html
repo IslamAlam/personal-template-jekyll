@@ -1,0 +1,113 @@
+---
+title: Publications
+layout: default
+navigation_weight: 4
+icon: icon fa fa-edit
+permalink: /publication/
+---
+
+<div id="publications" class="page">
+
+    <div class="page-container">
+        <div class="pageheader">
+            <div class="headercontent">
+                <div class="section-container">
+                    
+                    <h2 class="title">Publications and Presentations</h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>If you used my computational methods in your research, I would be thrilled if you cited me in your article.  </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="pagecontents">
+                
+                <div class="section color-1" id="filters">
+                    <div class="section-container">
+                        <div class="row">
+                            
+                            <div class="col-md-3">
+                                <h3>Filter by type:</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+
+                                    <!-- For loop for Publication Items filter -->
+                                    <option class="filter" value="all" selected>All types</option>
+                                    {% for publication_item in site.publication %}
+                                        <option class="filter" value="{{ publication_item.type }}">{{ publication_item.label }}</option> 
+                                    {% endfor %}
+                                    
+                                    <!-- 
+                                    <option class="filter" value="jpaper">Jounal Papers</option>
+                                    <option class="filter" value="cpaper">Conference Papers</option>
+                                    <option class="filter" value="poster">Posters</option>
+                                    
+                                    <option class="filter" value="report">Reports</option>
+                                    <option class="filter" value="tpaper">Technical Papers</option> -->
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3" id="sort">
+                                <span>Sort by year:</span>
+                                <div class="btn-group pull-right"> 
+
+                                    <button type="button" data-sort="data-year" data-order="desc" class="sort btn btn-default"><i class="fa fa-sort-numeric-asc"></i></button>
+                                    <button type="button" data-sort="data-year" data-order="asc" class="sort btn btn-default"><i class="fa fa-sort-numeric-desc"></i></button>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+			<div class="section color-2" id="pub-grid">
+				<div class="section-container">
+					
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pitems">
+
+                                <!-- Publication Items -->
+								{% for publication_item in site.publication %}
+    								<div class="item mix {{ publication_item.type }}" data-year="{{ publication_item.year }}">
+    									<div class="pubmain">
+    										<div class="pubassets">
+                                                    
+                                                    <a href="#" class="pubcollapse">
+                                                        <i class="fa fa-plus-square-o"></i>
+                                                    </a>
+                                                    <a href="{{ publication_item.link }}" class="tooltips" title="External link" target="_blank">
+                                                        <i class="fa fa-external-link"></i>
+                                                    </a>
+                                                    <a href="{{ publication_item.download }}" class="tooltips" title="Download" target="_blank">
+                                                        <i class="fa fa-cloud-download"></i>
+                                                    </a>
+                                            </div>
+
+    										<h4 class="pubtitle">{{ publication_item.title }}</h4>
+    										<div class="pubauthor">{{ publication_item.author }}</div>
+    										 <div class="pubcite"><span class="label label-success">{{ publication_item.label }}</span> {{ publication_item.cite }}</div> 				
+    									</div>
+    									<div class="pubdetails"> {{ publication_item.subtitle }}</div>
+    								</div>
+                                {% endfor %}
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+
+        </div>
+    </div>
+
+    
+</div>
+
+

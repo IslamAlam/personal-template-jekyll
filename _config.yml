@@ -1,0 +1,27 @@
+--- 
+author: "Islam Mansour"
+baseurl: ""
+collections: 
+  about: ~
+  contact: ~
+  gallery: ~
+  menu: ~
+  publication: ~
+  resume: ~
+description: "{{ site.author }} academic webpage Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.\n"
+email: your-email@domain.com
+encoding: utf-8
+image_path: "/img/jennifer-doe.jpg"
+keywords: ""
+markdown: kramdown
+name: Islam
+title: "Space Engineer"
+url: "http://yourdomain.com"
+url_cv: "mansour.pdf"
+
+twitter_username:     r3bl_
+github_username:      aleksandar-todorovic
+linkedin_username:    aleksandartodorovic
+google_plus_username: AleksandarTodorovićr3bl
+facebook_username:    aleksandar.todorovic.r3bl
+dribbble_username:

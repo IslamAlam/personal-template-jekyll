@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ site.author }} | PERSONAL WEBSITE | {{ page.title }} </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="{{ site.author }}">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+        <meta name="description" content="{{ site.description }}" />
+        <meta name="keywords" content="{{ site.keywords }}" />
+       
+        <!-- For PC Browser: -->
+        <link rel="shortcut icon" href="{{ "/img/icon/favicon.ico" | prepend: site.baseurl }}">
+        <!-- For Chrome for Android: -->
+        <link rel="icon" sizes="192x192" href="{{ "/img/icon/touch-icon-192x192.png" | prepend: site.baseurl }}">
+        <!-- For iPhone 6 Plus with @3× display: -->
+        <link rel="apple-touch-icon-precomposed" sizes="180x180" href="{{ "/img/icon/apple-touch-icon-180x180-precomposed.png" | prepend: site.baseurl }}">
+        <!-- For iPad with @2× display running iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ "/img/icon/apple-touch-icon-152x152-precomposed.png" | prepend: site.baseurl }}">
+        <!-- For iPad with @2× display running iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ "/img/icon/apple-touch-icon-144x144-precomposed.png" | prepend: site.baseurl }}">
+        <!-- For iPhone with @2× display running iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ "/img/icon/apple-touch-icon-120x120-precomposed.png" | prepend: site.baseurl }}">
+        <!-- For iPhone with @2× display running iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ "/img/icon/apple-touch-icon-114x114-precomposed.png" | prepend: site.baseurl }}">
+        <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ "/img/icon/apple-touch-icon-76x76-precomposed.png" | prepend: site.baseurl }}">
+        <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ "/img/icon/apple-touch-icon-72x72-precomposed.png" | prepend: site.baseurl }}">
+        <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+        <link rel="apple-touch-icon-precomposed" href="{{ "/img/icon/apple-touch-icon-precomposed.png" | prepend: site.baseurl }}"><!-- 57×57px -->
+
+        <!--CSS styles-->
+        <link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ "/css/font-awesome.min.css" | prepend: site.baseurl }}">  
+        <link rel="stylesheet" href="{{ "/css/perfect-scrollbar-0.4.5.min.css" | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ "/css/magnific-popup.css" | prepend: site.baseurl }}">
+        <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+        <link id="theme-style" rel="stylesheet" href="{{ "/css/styles/default.css" | prepend: site.baseurl }}">
+
+        
+        <!--/CSS styles-->
+        <!--Javascript files-->
+        <script type="text/javascript" src="{{ "/js/jquery-1.10.2.js" | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ "/js/TweenMax.min.js" | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ "/js/jquery.touchSwipe.min.js" | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ "/js/jquery.carouFredSel-6.2.1-packed.js" | prepend: site.baseurl }}"></script>
+        
+        <script type="text/javascript" src="{{ "/js/modernizr.custom.63321.js" | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ "/js/jquery.dropdownit.js" | prepend: site.baseurl }}"></script>
+
+        <script type="text/javascript" src="{{ "/js/jquery.stellar.min.js" | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ "/js/ScrollToPlugin.min.js" | prepend: site.baseurl }}"></script>
+
+        <script type="text/javascript" src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+
+        <script type="text/javascript" src="{{ "/js/jquery.mixitup.min.js" | prepend: site.baseurl }}"></script>
+
+        <script type="text/javascript" src="{{ "/js/masonry.min.js" | prepend: site.baseurl }}"></script>
+
+        <script type="text/javascript" src="{{ "/js/perfect-scrollbar-0.4.5.with-mousewheel.min.js" | prepend: site.baseurl }}"></script>
+
+        <script type="text/javascript" src="{{ "/js/magnific-popup.js" | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ "/js/custom.js" | prepend: site.baseurl }}"></script>
+
+        <!--/Javascript files-->
+
+    </head>
+    <body>
+
+        <div id="wrapper">
+            <a href="#sidebar" class="mobilemenu"><i class="fa fa-navicon"></i></a>
+
+            <div id="sidebar">
+                <div id="main-nav">
+                    <div id="nav-container">
+                        <div id="profile" class="clearfix">
+                            <div class="portrate hidden-xs"></div>
+                            <div class="title">
+                                <h2>{{ site.author }}</h2>
+                                <h3>{{ site.title }}</h3>
+                            </div>
+                            
+                        </div>
+                        <ul id="navigation">
+                            <!-- <li class="currentmenu"> -->
+
+                            {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
+                            {% for p in navigation_pages %}
+                              {% if p.navigation_weight %}
+                                <li {% if p.url == page.url %}class="currentmenu"{% endif %}>
+                                  <a href="{{ p.url }}">
+                                    <div class="{{ p.icon }}"></div>
+                                    <div class="text">{{ p.title }}</div>
+                                  </a>
+                                </li>
+                              {% endif %}
+                            {% endfor %}
+
+
+                            <li>
+                              <a href="/{{ site.url_cv }}" target="_blank">
+                                  <div class="icon fa fa-download"></div>
+                                  <div class="text">Download CV</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>        
+                </div>
+                
+                <div class="social-icons">
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>    
+            </div>
+
+            <div id="main">
+
+            	{{ content }}
+
+            </div>
+
+                
+           </div>
+        </div>
+    </body>
+</html>
+
