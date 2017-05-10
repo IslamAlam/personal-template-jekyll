@@ -90,7 +90,7 @@
                             {% for p in navigation_pages %}
                               {% if p.navigation_weight %}
                                 <li {% if p.url == page.url %}class="currentmenu"{% endif %}>
-                                  <a href="{{ p.url }}">
+                                  <a href="{{ p.url | prepend: site.baseurl }}"> 
                                     <div class="{{ p.icon }}"></div>
                                     <div class="text">{{ p.title }}</div>
                                   </a>
@@ -100,7 +100,7 @@
 
 
                             <li>
-                              <a href="/{{ site.url_cv }}" target="_blank">
+                              <a href="{{ site.url_cv | prepend: site.baseurl }}" target="_blank"> 
                                   <div class="icon fa fa-download"></div>
                                   <div class="text">Download CV</div>
                               </a>

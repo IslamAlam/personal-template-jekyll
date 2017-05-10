@@ -17,7 +17,7 @@ markdown: kramdown
 name: Islam
 title: "Space Engineer"
 url: "http://yourdomain.com"
-url_cv: "mansour.pdf"
+url_cv: "/mansour.pdf"
 
 twitter_username:     r3bl_
 github_username:      aleksandar-todorovic
