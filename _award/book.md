@@ -1,6 +1,6 @@
 ---
-title: 'The Dragonfly Effect: Quick, Effective, and Powerful Ways To Use Social Media to Drive Social Change'
-year: '2014'
+title: 'Honours List'
+year: '2014-2017'
 type: 'book'
 author: '<strong>Jennifer Doe</strong>,  Emily N. Garbinsky, Kathleen D. Vohs'
 label: 'Book'
@@ -19,3 +19,4 @@ subtitle: '<img alt="image" src="http://placehold.it/150x200"  style="padding:0 
             </ul>'
 ---
 
+Achieved the high honour list for two-semsters and the honour list for the other three-semsters of study respectively.
